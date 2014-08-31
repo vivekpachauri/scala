@@ -46,5 +46,15 @@ object Bloxorz extends App {
         |------ooo-""".stripMargin
   }
   println(Level1.neighborsWithHistory(Level1.Block(Level1.Pos(1,1),Level1.Pos(1,1)), List(Level1.Left,Level1.Up)).take(2).toList)
-  //println(Level1.solution)
+
+  println(Level1.newNeighborsOnly(
+  Set(
+    (Level1.Block(Level1.Pos(1,2),Level1.Pos(1,3)), List(Level1.Right,Level1.Left,Level1.Up)),
+    (Level1.Block(Level1.Pos(2,1),Level1.Pos(3,1)), List(Level1.Down,Level1.Left,Level1.Up))
+  ).toStream,
+
+  Set(Level1.Block(Level1.Pos(1,2),Level1.Pos(1,3)), Level1.Block(Level1.Pos(1,1),Level1.Pos(1,1)))
+).take(2).toList)
+
+//println(Level1.solution)
 }
