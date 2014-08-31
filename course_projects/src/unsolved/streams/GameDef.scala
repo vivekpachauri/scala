@@ -32,10 +32,10 @@ trait GameDef {
     /** The position obtained by changing the `x` coordiante by `d` */
     def dx(d: Int) = copy(x = x + d, y)
     def incrementXCoordOfPosition(coord: Int) = dx(coord)
-    /** The position obtained by changing the `y` coordiante by `d` */
+    /** The position obtained by changing the `y` coordinate by `d` */
     def dy(d: Int) = copy(x, y = y + d)
     def incrementYCoordOfPosition(coord: Int) = dy(coord)
-    override def toString: String = "x->" + x + " y->" + y
+    override def toString: String = "Pos(" + x + "," + y + ")"
   }
 
   /**
@@ -83,7 +83,7 @@ trait GameDef {
    * This function returns the block at the start position of
    * the game.
    */
-  def startBlock: Block = ???
+  def startBlock: Block = Block(startPos, startPos)
 
   /**
    * A block is represented by the position of the two cubes that

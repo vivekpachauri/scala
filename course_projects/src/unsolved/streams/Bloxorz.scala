@@ -1,5 +1,6 @@
 package unsolved.streams
 
+import unsolved.streams._
 /**
  * A main object that can be used to execute the Bloxorz solver
  */
@@ -44,6 +45,6 @@ object Bloxorz extends App {
         |-----ooToo
         |------ooo-""".stripMargin
   }
-
-  println(Level1.solution)
+  println(Level1.neighborsWithHistory(Level1.Block(Level1.Pos(1,1),Level1.Pos(1,1)), List(Level1.Left,Level1.Up)).take(2).toList)
+  //println(Level1.solution)
 }

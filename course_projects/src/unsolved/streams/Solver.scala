@@ -28,7 +28,19 @@ trait Solver extends GameDef {
    * It should only return valid neighbors, i.e. block positions
    * that are inside the terrain.
    */
-  def neighborsWithHistory(b: Block, history: List[Move]): Stream[(Block, List[Move])] = ???
+  def neighborsWithHistory(b: Block, history: List[Move]): Stream[(Block, List[Move])] = {
+    /*
+     * I have the current block which can give me the valid neighbors [Block, List[Move]]
+     * I have the current block and the current list of moves
+     */
+    val next = for {
+      neighbor <- b.legalNeighbors
+    }
+    yield {
+      (neighbor._1, neighbor._2::history)
+    }
+    next.toStream
+  }
 
   /**
    * This function returns the list of neighbors without the block
@@ -83,5 +95,5 @@ trait Solver extends GameDef {
    * the first move that the player should perform from the starting
    * position.
    */
-  lazy val solution: List[Move] = ???
+  lazy val solution: List[Move] = Nil
 }
