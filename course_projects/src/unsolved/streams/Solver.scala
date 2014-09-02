@@ -94,7 +94,7 @@ trait Solver extends GameDef {
   /**
    * The stream of all paths that begin at the starting block.
    */
-  lazy val pathsFromStart: Stream[(Block, List[Move])] = from(List((startBlock, List())).toStream, Set(startBlock))
+  lazy val pathsFromStart: Stream[(Block, List[Move])] = from(Stream((startBlock, List())), Set(startBlock))
 
   /**
    * Returns a stream of all possible pairs of the goal block along
@@ -103,6 +103,9 @@ trait Solver extends GameDef {
   lazy val pathsToGoal: Stream[(Block, List[Move])] = {
     println(endBlock)
     pathsFromStart filter (x => x._1 equals endBlock)
+/*    for {
+      ppp <- pathsFromStart if (ppp._1.equals(endBlock))
+    } yield ppp*/
   }
   /**
    * The (or one of the) shortest sequence(s) of moves to reach the
@@ -112,5 +115,17 @@ trait Solver extends GameDef {
    * the first move that the player should perform from the starting
    * position.
    */
-  lazy val solution: List[Move] = Nil
+  lazy val solution: List[Move] = //List()
+  {
+    if (pathsToGoal equals Stream.Empty) List()
+    else
+    {
+    	pathsToGoal(0)._2.reverse
+    }
+  }
+
+  /*{
+    if (pathsToGoal equals Stream.Empty) List()
+    else pathsToGoal.sortWith((x,y)=>x._2.length < y._2.length).take(1).unzip._2(0).reverse
+  }*/
 }
