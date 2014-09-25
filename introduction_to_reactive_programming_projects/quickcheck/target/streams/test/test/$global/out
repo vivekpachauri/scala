@@ -1,0 +1,8 @@
+[0m[[0mdebug[0m] [0mRunning Test quickcheck.QuickCheckSuite : subclass(false, org.scalatest.Suite) with arguments [0m
+[0m[[0mdebug[0m] [0mRunning Test quickcheck.QuickCheckBinomialHeap : subclass(true, org.scalacheck.Properties) with arguments [0m
+[0m[[31merror[0m] [0mFailed: : Total 40, Failed 1, Errors 0, Passed 39, Skipped 0[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	quickcheck.QuickCheckBinomialHeap[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	quickcheck.QuickCheckSuite[0m
+[0m[[31merror[0m] [0m(assignment/test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

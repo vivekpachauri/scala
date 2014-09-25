@@ -1,0 +1,106 @@
+package recfun
+import common._
+
+object Main {
+  def main(args: Array[String]) {
+    println("Pascal's Triangle")
+    for (row <- 0 to 10) {
+      for (col <- 0 to row)
+        print(pascal(col, row) + " ")
+      println()
+    }
+  }
+
+  /**
+   * Exercise 1
+   */
+  def pascal(c: Int, r: Int): Int = {
+    /*
+     * give that the numbers at the edge of triangles are 1 so we can use the following as base
+     * case:
+     */
+    /*
+     * the very first element of each level is 1 => if n is 0 then return 1
+     */
+    /*
+     * the very last element of each level is 1 => if m is equal to n then return 1
+     */
+    /*
+     * the very top level element could be 1 using either of the two logic
+     */
+    /*
+     * if the element is not the first or the last element of the level then it is the
+     * sum of the element at row r-1 column c-1 and the element at row r-1 and column c  
+     */
+    
+    /* dammiiiiiitttttt */
+    /* looks like I forgot add and else and wrote the second check asif instead of else if
+     * fffffffffffffffffffffffffff
+     */
+    /* if ( c == 0 ) 1
+    else if ( r == 0 ) 1
+    else if ( c == r ) 1
+    else return pascal(c, r-1) + pascal(c-1, r-1)*/
+    
+    if ( c == 0 ) 1
+    else {
+      if (r == 0 ) 1
+      else
+      {
+        if ( r == c ) 1
+        else
+        {
+          pascal (c - 1, r - 1) + pascal(c, r-1)
+        }
+      }
+    }
+  }
+
+  /**
+   * Exercise 2
+   */
+  def balance(chars: List[Char]): Boolean = {
+    /*
+     * here is the logic:
+     * create an inner function that takes the parameter string and an integer value, the integer
+     * value could represent how many open parentheses have been seen so far.
+     */
+    def innerBalance(chars: List[Char], numOpen: Int): Boolean = {
+      /*
+       * base case 1 - numOpen less than 0 means seeing a close parentheses without its matching
+       * open parentheses and thus an unbalanced set of parentheses
+       */
+      if ( numOpen < 0 ) false;
+      /*
+       * base case 2 - empty character list with numOpen equal to 0 means balanced parentheses
+       */
+      else if ( (chars.isEmpty) && (numOpen == 0) ) true;
+      /*
+       * base case 3 - empty character list with numOpen not equal to 0 means unbalanced set of
+       * parentheses
+       */
+      else if ( (chars.isEmpty) && (numOpen != 0) ) false;
+      /*
+       * recursive case 1 - if first of chars is '(' then call innerBalance with
+       * rest of chars and numOpen = numOpen + 1
+       */
+      else if ( chars.head == '(' ) innerBalance(chars.tail, (numOpen+1));
+      /*
+       * recursive case 2 - if first of chars is ')' then call innerBalance with rest of
+       * chars and numOpen = numOpen - 1
+       */
+      else if ( chars.head == ')' ) innerBalance(chars.tail, (numOpen -1 ));
+      /*
+       * recursive case 3 - if first of chars is neither ')' nor '(' then call innerBalance with
+       * rest chars and numOpen
+       */
+      else innerBalance(chars.tail, numOpen);
+    }
+    innerBalance(chars, 0);
+  }
+
+  /**
+   * Exercise 3
+   */
+  def countChange(money: Int, coins: List[Int]): Int = ???
+}

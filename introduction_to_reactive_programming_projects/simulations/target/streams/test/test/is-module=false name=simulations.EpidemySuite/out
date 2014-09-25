@@ -1,0 +1,42 @@
+[0m[[0minfo[0m] [0m[32mEpidemySuite:[0m[0m
+[0m[[0minfo[0m] [0m[31m- prevalence rate *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  prevalence rate should be 0.01 (EpidemySuite.scala:17)[0m[0m
+[0m[[0minfo[0m] [0m[31m- dead person stays dead *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  java.util.NoSuchElementException: head of empty list[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.Nil$.head(List.scala:337)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.Nil$.head(List.scala:334)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$2.apply$mcV$sp(EpidemySuite.scala:25)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$2.apply(EpidemySuite.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$2.apply(EpidemySuite.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anon$1.apply(FunSuite.scala:1265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Suite$class.withFixture(Suite.scala:1974)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite.withFixture(EpidemySuite.scala:9)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$class.invokeWithFixture$1(FunSuite.scala:1262)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anonfun$runTest$1.apply(FunSuite.scala:1271)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- life cycle *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  java.util.NoSuchElementException: None.get[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.None$.get(Option.scala:313)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.None$.get(Option.scala:311)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$3.apply$mcV$sp(EpidemySuite.scala:58)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$3.apply(EpidemySuite.scala:46)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$3.apply(EpidemySuite.scala:46)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anon$1.apply(FunSuite.scala:1265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Suite$class.withFixture(Suite.scala:1974)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite.withFixture(EpidemySuite.scala:9)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$class.invokeWithFixture$1(FunSuite.scala:1262)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anonfun$runTest$1.apply(FunSuite.scala:1271)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[31m- transmissibility rate *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  java.util.NoSuchElementException: None.get[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.None$.get(Option.scala:313)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.None$.get(Option.scala:311)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$4$$anonfun$apply$mcV$sp$1.apply$mcVI$sp(EpidemySuite.scala:92)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$4.apply$mcV$sp(EpidemySuite.scala:90)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$4.apply(EpidemySuite.scala:88)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite$$anonfun$4.apply(EpidemySuite.scala:88)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.FunSuite$$anon$1.apply(FunSuite.scala:1265)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Suite$class.withFixture(Suite.scala:1974)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at simulations.EpidemySuite.withFixture(EpidemySuite.scala:9)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
