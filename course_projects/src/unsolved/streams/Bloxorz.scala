@@ -65,6 +65,7 @@ object Bloxorz extends App {
   println(Level1.pathsToGoal.take(3).toList.mkString("\n"))
   println("===solution")
   println(Level1.solution)
-
+  println("===solution of Level0")
+  println(Level0.solution)
   //println(Level1.solution)
 }
